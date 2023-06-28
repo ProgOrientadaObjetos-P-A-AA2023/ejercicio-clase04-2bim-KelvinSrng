@@ -13,10 +13,12 @@ public class Persona {
     
     private String nombre;
     private String cedula;
+    private String apellido;
     private int edad;
     
-    public Persona(String n, String ide, int ed){
+    public Persona(String n, String apell, String ide, int ed){
         nombre = n;
+        apellido = apell;
         cedula = ide;
         edad = ed;
     }
@@ -29,12 +31,28 @@ public class Persona {
         cedula = n;
     }
     
+    public void establecerEdad(int x){
+        edad = x;
+    }
+    
+    public void establecerApellido(String x){
+        apellido = x;
+    }
+    
     public String obtenerNombre(){
         return nombre;
     }
     
     public String obtenerCedula(){
         return cedula;
+    }
+    
+    public int obtenerEdad(){
+        return edad;
+    }
+    
+    public String obtenerApellido(){
+        return apellido;
     }
     
 }
